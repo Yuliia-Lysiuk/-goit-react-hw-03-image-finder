@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 function  ImageGallery ({img, onClick}) {
     return (
       <ul className="ImageGallery" onClick={onClick}>
-            {img.map(({ tags, webformatURL, id, largeImageURL }) => {
+            {img.map(({ tags, webformatURL, id, largeImageURL }, index) => {
                 
                 return (
                     <ImageGalleryItem
-                        key={webformatURL}
+                        key={index}
                         img={webformatURL}
                         tags={tags} 
                         bigimg ={largeImageURL}
